@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-docker push USER/REPO
+docker push skrop/skrop-build
