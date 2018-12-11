@@ -20,9 +20,7 @@ before_script:
 - docker pull "$IMAGE_NAME" || true
 
 script:
-- docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
-
-after_success:
+- docker build --pull --cache-from "$IMAGE_NAME" --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` --tag "$IMAGE_NAME" .
 - ./git-tag.sh $NEXT_PATCH_VERSION
 
 before_deploy:
@@ -34,7 +32,7 @@ deploy:
   script: ./docker-push.sh $NEXT_PATCH_VERSION
   on:
     repo: danpersa/skrop-build-docker
-    tags: true
+    branch: master
 - provider: releases
   skip_cleanup: true
   api_key:
