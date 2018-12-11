@@ -16,4 +16,5 @@ RUN apk add --update git bash
 ADD install-vips.sh install-vips.sh
 RUN ./install-vips.sh
 RUN go get github.com/wadey/gocovmerge
+RUN go build github.com/wadey/gocovmerge
 ENV GO111MODULE on
