@@ -10,9 +10,10 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 ENV GOPATH /go
 ENV GOOS linux
-ENV GO111MODULE on
 
 RUN apk add --update git bash
 
 ADD install-vips.sh install-vips.sh
 RUN ./install-vips.sh
+RUN go get github.com/wadey/gocovmerge
+ENV GO111MODULE on
