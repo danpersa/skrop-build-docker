@@ -1,16 +1,44 @@
 services:
-  - docker
+- docker
+
+language: go
+go:
+- 1.11.1
 
 env:
   global:
-  - secure: "PQ8bpgEOT/m2fFv50kTLHUPFGUJ7cvarKDaS5Mjp1qE2uMhm1IaYs8sChcVcMp/XEI7cYyUHN2VnelWRt4eYldCm6O5Hn4ouvx7fC5oTZyHThsd00jAKPhJba79a/yFbR39fqEndTORpIKoylLNgjngv2LhYCkZfz7yjGGhAwrFEvFfaZssbQe4wpZQF0yLydn/kIxGUIFqoGiqAGHlW1ghRP0XUEPuOsrGOHA/vufOa5nwcPQK/+XXqtIa91tUqf8jbdlFBtcoTMWoMc3WjtrfskYL8kd+VzcA91o6WIaSZcD2IwVdK3u8A7Lo25Tk9BdawmG5XbkkNTis6Buz+c/mhqJd7Ig4X6SBPQydq5uzDrLRnD0c9Z8AcXmSBqsqgy2xGdsBaYcO0LAsI7gNgWkn6zvw6c93V90fty7AA3Cw1FKR5182jedY11/7MCLIaWjeGqRn17qZTeV2YC4uazopChVv+htQgMUtMgeKLYNLq8LjYZ9jVc7lNCzgly4FtY7Awut9s2nP8QJgoDxLyXPyu7x5UKbGpOXf9iv8BmtYGqz5gi1bVh7i4NRJlXzzOfTK/o++DCezKEKo7DIlNWucO6Lezldn+FOZ0hhz3CBnzBSB4Xj8ZiKitVkD9bmtvIn3iIE8XdMhttp2QaUK3ztCvJoq/VnYsgk84VDWUriY="
-  - secure: "lHzAUC3dH1OwP/cS8w1ZkDWHYSNZnVUSaNpU6yCWsONnJM+rY+dGGZXiZZpB3h0Z/pw1VJ+VhyQGI8WkwkPHcNEFcWO/PlTf+F84gfkYIcaw6NAlDz7+QGn9YGQvGFJk7e2qTKJC4DHiyEch7D9ouqBmQzKsrNRfhyiYfKMKphBZscN28SbTsZmlwQmSuCtVNoJ6QZ6i6YYd+t6Nyscbi5NwgMG1Mm7nuc0w6FGnWuEumfxinqhOZIDErYX9P/1V34zGyocvwAm/2G9AJeEsXJGO7NAuH0jLL7Q2TpLZZFQ1/PJS9ZK+t/4IKi89SLs3PDC/9RP43RxGFS/P3sfduQeIOovpcK7TRbh437zAzSc30iXKyRL79fgfxtp9lXzTctnm2xUfLJfRrFHwZah4isGch8oV8Qg3/JKIPI73jG9rWu5Az1S4/b9BrApxsm52fg87O5/tvjAihAFozNYQmDyq0HfGIyxclfo4bQ8lAbVdZfM2Wm5rzAY6tpvFM+67bXzmSbuT5ohoDffJF0V90+NCO/unS2TkZk7ptwqO79WCwyAEhTcvajD7+mY4aNC/D2zwzFhqF3PqX8UgWqpORh6mdwCGZDu4wAuT7PbvOMOvgS3GUhDm1pfY0x+t5PQOqHs1WIVkRvVFCZhoY7nmjjRucNQe9VQkJPcnWnYJgVw="
+  - IMAGE_NAME=skrop/skrop-build
+  - secure: PQ8bpgEOT/m2fFv50kTLHUPFGUJ7cvarKDaS5Mjp1qE2uMhm1IaYs8sChcVcMp/XEI7cYyUHN2VnelWRt4eYldCm6O5Hn4ouvx7fC5oTZyHThsd00jAKPhJba79a/yFbR39fqEndTORpIKoylLNgjngv2LhYCkZfz7yjGGhAwrFEvFfaZssbQe4wpZQF0yLydn/kIxGUIFqoGiqAGHlW1ghRP0XUEPuOsrGOHA/vufOa5nwcPQK/+XXqtIa91tUqf8jbdlFBtcoTMWoMc3WjtrfskYL8kd+VzcA91o6WIaSZcD2IwVdK3u8A7Lo25Tk9BdawmG5XbkkNTis6Buz+c/mhqJd7Ig4X6SBPQydq5uzDrLRnD0c9Z8AcXmSBqsqgy2xGdsBaYcO0LAsI7gNgWkn6zvw6c93V90fty7AA3Cw1FKR5182jedY11/7MCLIaWjeGqRn17qZTeV2YC4uazopChVv+htQgMUtMgeKLYNLq8LjYZ9jVc7lNCzgly4FtY7Awut9s2nP8QJgoDxLyXPyu7x5UKbGpOXf9iv8BmtYGqz5gi1bVh7i4NRJlXzzOfTK/o++DCezKEKo7DIlNWucO6Lezldn+FOZ0hhz3CBnzBSB4Xj8ZiKitVkD9bmtvIn3iIE8XdMhttp2QaUK3ztCvJoq/VnYsgk84VDWUriY=
+  - secure: lHzAUC3dH1OwP/cS8w1ZkDWHYSNZnVUSaNpU6yCWsONnJM+rY+dGGZXiZZpB3h0Z/pw1VJ+VhyQGI8WkwkPHcNEFcWO/PlTf+F84gfkYIcaw6NAlDz7+QGn9YGQvGFJk7e2qTKJC4DHiyEch7D9ouqBmQzKsrNRfhyiYfKMKphBZscN28SbTsZmlwQmSuCtVNoJ6QZ6i6YYd+t6Nyscbi5NwgMG1Mm7nuc0w6FGnWuEumfxinqhOZIDErYX9P/1V34zGyocvwAm/2G9AJeEsXJGO7NAuH0jLL7Q2TpLZZFQ1/PJS9ZK+t/4IKi89SLs3PDC/9RP43RxGFS/P3sfduQeIOovpcK7TRbh437zAzSc30iXKyRL79fgfxtp9lXzTctnm2xUfLJfRrFHwZah4isGch8oV8Qg3/JKIPI73jG9rWu5Az1S4/b9BrApxsm52fg87O5/tvjAihAFozNYQmDyq0HfGIyxclfo4bQ8lAbVdZfM2Wm5rzAY6tpvFM+67bXzmSbuT5ohoDffJF0V90+NCO/unS2TkZk7ptwqO79WCwyAEhTcvajD7+mY4aNC/D2zwzFhqF3PqX8UgWqpORh6mdwCGZDu4wAuT7PbvOMOvgS3GUhDm1pfY0x+t5PQOqHs1WIVkRvVFCZhoY7nmjjRucNQe9VQkJPcnWnYJgVw=
+  - secure: "PcC/s+/RXyS2XhnvbIgQE2h3QeSFmyD4s4m67ppSUJOabzNi2ZGiuwdOBKhvTK/pBQd1THABcTgSEIPpDSnXyFDAyUA8C3G35Dnh/6NTNYsBGao45RrB6AWwnIrm48ra7207DjHFfbZula4yPhyJepKxJszLt9oB/IXoR9Heu/MIw5GWoCpKWkWCYtoaTFUaE1bcPgWgu9xY/xjU9d8RmvFopdkvyCjmaTS2RqLL9MvAhy77mPLftZY2pnxq2z4eXjygtPAbuGg3B2Ba9PV+0N+0VrkxXbyuhf2cH55HOSMrE2PdWV4oNydkKJvfVILgmvV+CwfAjWu1XgHO7k69Z9Kzn1Lip6Vm6pa6h/zoEvE+xI7Da37AH/NSyQazgyhe7sNJZ79nXXs/9URWVL4twN6oQ90tr0rS14hqej/FHNl++U2630sZ1kp989d3Y7SO0KpqXEW7xOc76Ibx6yJV1Wg46/asorA8AfUouJ6OGZchAVideNiMu5itm/kE9jHtUjl9xPQMHdhD4IkbHRAn8NIgUCNRUlqwu50gGl5gI0lI2YThNVa1+VRZQx4Y6fydUwbuxYXrpq4B9R3HS5MthZUqZ6rKoCpGvNARCvA2F44Ph6ha3/cn2O8IlXakSAi66r5/Y9REEuq8PviTyDAZfwEFyLuB3zhDNa+l+7W53Tw="
+
+before_script:
+- CURRENT_VERSION="$(git describe --tags --always)"
+- echo "CURRENT_VERSION=${CURRENT_VERSION}"
+- NEXT_PATCH_VERSION="$(go run version.go patch ${CURRENT_VERSION})"
+- echo "NEXT_PATCH_VERSION=${NEXT_PATCH_VERSION}"
+- docker pull "$IMAGE_NAME" || true
 
 script:
-  docker build -t skrop/skrop-build .
+- docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
+
+after_success:
+- ./git-tag.sh $NEXT_PATCH_VERSION
+
+before_deploy:
+- docker tag "$IMAGE_NAME" "${IMAGE_NAME}:latest"
+- docker tag "$IMAGE_NAME" "${IMAGE_NAME}:${NEXT_PATCH_VERSION}"
 
 deploy:
-  provider: script
-  script: ./docker-push.sh
+- provider: script
+  script: ./docker-push.sh $NEXT_PATCH_VERSION
   on:
-    branch: master
+    repo: danpersa/skrop-build-docker
+    tags: true
+- provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: "PcC/s+/RXyS2XhnvbIgQE2h3QeSFmyD4s4m67ppSUJOabzNi2ZGiuwdOBKhvTK/pBQd1THABcTgSEIPpDSnXyFDAyUA8C3G35Dnh/6NTNYsBGao45RrB6AWwnIrm48ra7207DjHFfbZula4yPhyJepKxJszLt9oB/IXoR9Heu/MIw5GWoCpKWkWCYtoaTFUaE1bcPgWgu9xY/xjU9d8RmvFopdkvyCjmaTS2RqLL9MvAhy77mPLftZY2pnxq2z4eXjygtPAbuGg3B2Ba9PV+0N+0VrkxXbyuhf2cH55HOSMrE2PdWV4oNydkKJvfVILgmvV+CwfAjWu1XgHO7k69Z9Kzn1Lip6Vm6pa6h/zoEvE+xI7Da37AH/NSyQazgyhe7sNJZ79nXXs/9URWVL4twN6oQ90tr0rS14hqej/FHNl++U2630sZ1kp989d3Y7SO0KpqXEW7xOc76Ibx6yJV1Wg46/asorA8AfUouJ6OGZchAVideNiMu5itm/kE9jHtUjl9xPQMHdhD4IkbHRAn8NIgUCNRUlqwu50gGl5gI0lI2YThNVa1+VRZQx4Y6fydUwbuxYXrpq4B9R3HS5MthZUqZ6rKoCpGvNARCvA2F44Ph6ha3/cn2O8IlXakSAi66r5/Y9REEuq8PviTyDAZfwEFyLuB3zhDNa+l+7W53Tw="
+  on:
+    repo: danpersa/skrop-build-docker
+    tags: true
