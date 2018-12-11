@@ -1,0 +1,11 @@
+services:
+  - docker
+
+script:
+  docker build -t skrop/skrop-build .
+
+deploy:
+  provider: script
+  script: bash docker-push.sh
+  on:
+    branch: master
