@@ -11,7 +11,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 ENV GOPATH /go
 ENV GOOS linux
 
-RUN apk add --update git bash
+RUN apk add --update git bash bzr
 
 ADD install-vips.sh install-vips.sh
 RUN ./install-vips.sh
